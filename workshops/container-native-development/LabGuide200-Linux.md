@@ -177,7 +177,7 @@ export PATH=$PATH:`pwd`
   gedit terraform.tfvars
   ```
 
-- You should still have a browser tab open to your **User Details** page in the OCI Console. click the **api.user** menu item and select **User Settings**.
+- You should still have a browser tab open to your **User Details** page in the OCI Console. Click the **api.user** menu item and select **User Settings**.
 
 
 - While editing the file, you will first remove the **#** comment character and replace in the values in the terraform.tfvars file on lines **2, 4, 6, and 7** using the examples in the next two images below. **NOTE**: The **region** parameter may not already be present in your tfvars file. If it is not there, add it on a new line after the user_ocid parameter on line 6.
