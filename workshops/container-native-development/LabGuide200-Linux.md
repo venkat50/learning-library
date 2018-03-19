@@ -80,7 +80,7 @@ cat ~/.oci/oci_api_key_public.pem
 
   ![](images/200/11.png)
 
-- In your browser window showing the OCI Console, click the **api.user** menu item.  Find your username in the list and hover over the **three dots** menu at the far right of the row, then click **View User Details**.
+- In your browser window showing the OCI Console, click the **api.user** menu item and select **User Settings** as shown below:
 
   ![](images/200/API-User1.PNG)
 
