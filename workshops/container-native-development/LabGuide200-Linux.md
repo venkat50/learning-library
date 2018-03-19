@@ -37,55 +37,30 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 
 - From any browser, go to:
 
-    [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
+    [https://console.us-ashburn-1.oraclecloud.com/#/a/](https://console.us-ashburn-1.oraclecloud.com/#/a/)
 
-- Enter your **Cloud Account Name** in the input field and click the **My Services** button. If you have a trial account, this can be found in your welcome email. Otherwise, this will be supplied by your workshop instructor.
+- Enter your **Cloud Tenant** in the input field and click **Continue**. This will be supplied by your workshop instructor.
 
-  ![](images/200/1.png)
+  ![](images/200/OCI-Login1.png)
 
-- Enter your **Username** and **Password** in the input fields and click **Sign In**. If you have a trial account, these can be found in your welcome email. Otherwise, these will be supplied by your workshop instructor.
+- Enter your **Username** and **Password** in the input fields and click **Sign In**. This will be supplied by your workshop instructor (`api.user or cloud.admin`) 
 
-  ![](images/200/2.png)
 
-**NOTE**: If you have used your trial account already, you may have been prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
+  ![](images/200/OCI-Login2.png)
 
-- In the top left corner of the dashboard, click the **hamburger menu**
+**NOTE**: If you had previously logged in, check the tenant name and just enter the username and password.
 
-  ![](images/200/3.png)
-
-- Click to expand the **Services** submenu, then click **Compute**
-
-  ![](images/200/4.png)
-
-- On the OCI Console sign in page, enter the same **Username** as you did on the previous sign in page. If you are using a trial account and this is your first time logging into the OCI Console, enter the **temporary password** from your trial account welcome email. If you have already visited the OCI Console and changed your password, enter your **new password**. Otherwise, this password will be supplied by your workshop instructor.
-
-  ![](images/200/5.png)
-
-### **STEP 2**: Locate or Create a Compartment for your Kubernetes nodes
+### **STEP 2**: Locate Demo Compartment for your Kubernetes nodes
 
 Compartments are used to isolate resources within your OCI tenant. User-based access policies can be applied to manage access to compute instances and other resources within a Compartment.
 
 - Hover over the **Identity** menu in the top navigation bar and click **Compartments**
 
-  ![](images/200/6.png)
+  ![](images/200/Demo-compartment.png)
 
-- If your workshop instructor has directed you to use a pre-created compartment **_do not create a new one_**. Locate the compartment in the list and click **Copy** next to the displayed OCID. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step. Proceed to **STEP 3**.
+- If your workshop instructor has directed you to use a pre-created compartment **_do not create a new one_**. Locate the **Demo** compartment in the list and click **Copy** next to the displayed OCID. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step. Proceed to **STEP 3**.
 
-  Otherwise, if you are using a trial account or paid account, proceed to the next instruction to create a compartment.
-
-  ![](images/200/9.png)
-
-- Click **Create Compartment**
-
-  ![](images/200/7.png)
-
-- In the **Name** field, enter `kubernetes`. Enter a description of your choice. Click **Create Compartment**.
-
-  ![](images/200/8.png)
-
-- In a moment, your new Compartment will show up in the list. Locate it and click **Copy** in the OCID display. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step.
-
-  ![](images/200/9.png)
+  
 
 ### **STEP 3**: Create and upload a new API key
 
