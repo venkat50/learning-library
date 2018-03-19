@@ -85,8 +85,7 @@ cat ~/.oci/oci_api_key_public.pem
   ![](images/200/API-User1.PNG)
 
 - Click **Add Public Key**
-
-  ![](images/200/12.png)
+  
 
 - **Paste** the public key from your clipboard into the text field and click **Add**. Note: The public key was copied to the clipboard when you ran the `cat` command from the terminal window, which copied the results to the clipboard using the `clip` command.
 
