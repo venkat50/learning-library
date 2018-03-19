@@ -187,7 +187,7 @@ export PATH=$PATH:`pwd`
 
 - You will replace lines **2, 4, 6, and 7** with the values from the OCI Console, referring to the following screenshot for where to find them.
 
-  ![](images/200/17.png)
+  ![](images/200/API-User-OCID.PNG)
 
 - As an example, Your terraform.tfvars file should now appear similar to the image shown below:
 
