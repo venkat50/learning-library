@@ -41,12 +41,12 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 
 - Enter your **Cloud Tenant** in the input field and click **Continue**. This will be supplied by your workshop instructor.
 
-  ![](images/200/OCI-Login1.png)
+  ![](images/200/OCI-Login1.PNG)
 
 - Enter your **Username** and **Password** in the input fields and click **Sign In**. This will be supplied by your workshop instructor (`api.user or cloud.admin`) 
 
 
-  ![](images/200/OCI-Login2.png)
+  ![](images/200/OCI-Login2.PNG)
 
 **NOTE**: If you had previously logged in, check the tenant name and just enter the username and password.
 
@@ -56,7 +56,7 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
 - Hover over the **Identity** menu in the top navigation bar and click **Compartments**
 
-  ![](images/200/Demo-compartment.png)
+  ![](images/200/Demo-Compartment.PNG)
 
 - If your workshop instructor has directed you to use a pre-created compartment **_do not create a new one_**. Locate the **Demo** compartment in the list and click **Copy** next to the displayed OCID. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step. Proceed to **STEP 3**.
 
