@@ -177,7 +177,7 @@ export PATH=$PATH:`pwd`
   gedit terraform.tfvars
   ```
 
-- You should still have a browser tab open to your **User Details** page in the OCI Console. Click the **api.user** menu item and select **User Settings**.
+- You should still have a browser tab open to your **User Details** page in the OCI Console. If not, click the **api.user** menu item and select **User Settings**.
 
 
 - While editing the file, you will first remove the **#** comment character and replace in the values in the terraform.tfvars file on lines **2, 4, 6, and 7** using the examples in the next two images below. **NOTE**: The **region** parameter may not already be present in your tfvars file. If it is not there, add it on a new line after the user_ocid parameter on line 6.
@@ -189,9 +189,7 @@ export PATH=$PATH:`pwd`
 
   ![](images/200/API-User-OCID.PNG)
 
-- As an example, Your terraform.tfvars file should now appear similar to the image shown below:
 
-  ![](images/200/57.2.png)
 
 - Now follow the same process of removing the comment character **#**, and fill in the OCI Compartment ID on **line 3**. Paste the value that you saved to a text file after creating the kubernetes **compartment** in the OCI Console. If you have lost it, you can retrieve it from the OCI Console compartment list (refer to **STEP 2**).
 
@@ -204,14 +202,17 @@ export PATH=$PATH:`pwd`
   ```
   private_key_path = "/Users/your-local-username/.oci/oci_api_key.pem"
   ```
+- As an example, Your terraform.tfvars file should now appear similar to the image shown below:
+
+  ![](images/200/57.2.png)
 
 - The rest of the terraform.tfvars file controls the parameters used when creating your Kubernetes cluster. You can control how many OCPUs each node receives, whether nodes should be virtual machines or bare metal instances, how many availability domains to use, and more. We will modify three of the lines in the remainder of the file.
 
 - First, we will specify that we want only one OCPU in each of the worker and master nodes. This reduces the hourly cost of running our cluster. On **lines 15 and 16**, uncomment the **k8sMasterShape** and **k8sWorkerShape** parameters, and set both values to **VM.Standard1.1**:
 
   ```
-  k8sMasterShape = "VM.Standard1.1"
-  k8sWorkerShape = "VM.Standard1.1"
+  k8sMasterShape = "VM.Standard1.4"
+  k8sWorkerShape = "VM.Standard2.1"
   ```
 
 - Next, we will specify the type of load balancers we want for the master and etcd VMs -- 400Mbps in this case. Alter **lines 30 and 31** to read:
